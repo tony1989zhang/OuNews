@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+ 
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        >
+
+        <WebView
+            android:id="@+id/activty_wb_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <RelativeLayout
+            android:id="@+id/loading"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#fff"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:id="@+id/loading_progress"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/load_faild"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:background="#fff"
+            android:gravity="center"
+            android:text="加载失败，请重试"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="#000"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:background="@color/title_red"
+        >
+        <TextView
+            android:id="@+id/tv1"
+            android:text="主页"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/home_icon"
+            style="@style/hometab_style"
+            />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:text="后退"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/web_back"
+            style="@style/hometab_style"
+            />
+        <TextView
+            android:id="@+id/tv3"
+            android:text="前进"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/web_forward"
+            style="@style/hometab_style"
+            />
+        <TextView
+            android:id="@+id/tv4"
+            android:text="刷新"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/web_refresh"
+            style="@style/hometab_style"
+            />
+        <TextView
+            android:id="@+id/tv5"
+            android:text="菜单"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/web_menu"
+            style="@style/hometab_style"
+            />
+        </LinearLayout>
+</LinearLayout>
